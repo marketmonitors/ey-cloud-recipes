@@ -1,3 +1,6 @@
+# Puts EngineYard server on pacific time
+include_recipe "timezone"
+
 # uncomment to use a custom database.yml configuration
 # include_recipe "database_yml_custom"
 
