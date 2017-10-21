@@ -28,8 +28,7 @@ write_sunspot_yml = node['solr']['write_sunspot_yml']
 # Gentoo 12.11 - end
 
 # Install Solr
-if ('solo' == node[:instance_role])  ||
-  ( ('util' == node[:instance_role]) && ('solr' == node[:name]) )
+if node[:name] == 'solr'#('solo' == node[:instance_role])  || ( ('util' == node[:instance_role]) && ('solr' == node[:name]) )
 
   unless use_default_java
     Chef::Log.info "Updating Java JDK"
